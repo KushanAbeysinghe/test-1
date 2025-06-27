@@ -1,0 +1,191 @@
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    text-align: center;
+}
+
+.wallet-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+/* Unlock Box */
+.unlock-box {
+    padding: 30px 20px;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+/* Title */
+h2 {
+    font-size: 26px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 32px;
+}
+
+/* Textarea */
+textarea {
+    width: 92%;
+    height: 300px; /* Increased height */
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 21px;
+    resize: none;
+    background-color: #fafafa;
+    color: #b3b3b3;
+    font-family: inherit;
+    text-align: left;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    box-sizing: border-box; /* Ensures padding doesn’t affect width */
+}
+
+
+/* Buttons */
+button {
+    width: 92%;
+    padding: 15px;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* Passphrase Button */
+.passphrase-btn {
+    background-color: white;
+    color: #6f3dcf;
+    border: 2px solid #6f3dcf;
+    margin-bottom: 10px;
+}
+
+/* Face ID Button */
+.faceid-btn {
+    background-color: #6f3dcf;
+    color: white;
+    border: none;
+    margin-bottom: 20px;
+}
+
+/* Info Text */
+.info-text {
+    font-size: 18px;
+    
+    margin-top: 20px;
+    line-height: 1.6;
+    text-align: left;
+ width: 92%;
+margin-left: 15px;
+}
+
+/* Lost Passphrase */
+.lost-passphrase {
+    font-size: 18px;
+    margin-top: 15px;
+    line-height: 1.6;
+    text-align: left;
+ width: 92%;
+margin-left: 15px;
+}
+
+.lost-passphrase a {
+    color: #3579f6;
+    text-decoration: none;
+    font-weight: bold;
+ 
+}
+
+.lost-passphrase a:hover {
+    text-decoration: underline;
+}
+
+/* Container */
+.container {
+    max-width: 450px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+
+/* Container */
+.container {
+    max-width: 450px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6a1b9a; /* Adjust color if needed */
+    padding: 10px;
+    position: relative;
+}
+
+.header-icon {
+    width: 30px; /* Adjust size as needed */
+    height: 30px;
+    margin: 0 10px; /* Adds spacing between elements */
+}
+
+.wallet-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+
+
+
+/* Popup container styling */
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+/* Popup box */
+.popup {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+    font-size: 18px;
+}
+
+/* Close button */
+.close-btn {
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #6f3dcf;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    background: #0056b3;
+}
+
+/* Hide popup by default */
+.hidden {
+    display: none;
+}

